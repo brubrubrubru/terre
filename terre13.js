@@ -1,10 +1,5 @@
-let arg1 = process.argv[2];
-let arg2 = process.argv[3];
-let arg3 = process.argv[4];
-
-
-
-if(isNaN(arg1) || isNaN(arg2) || isNaN(arg3))
+function func(arg1, arg2, arg3){
+    if(isNaN(arg1) || isNaN(arg2) || isNaN(arg3))
 {
     console.log("erreur");
 } else {    
@@ -26,3 +21,6 @@ if(isNaN(arg1) || isNaN(arg2) || isNaN(arg3))
         console.log("erreur");
     }
 }
+}
+
+func(process.argv[2], process.argv[3], process.argv[4]);

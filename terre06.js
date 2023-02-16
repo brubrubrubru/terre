@@ -1,13 +1,15 @@
-const input = process.argv[2];
+const func = (input = process.argv[2]) => {
+    if(input){
 
-if(input){
-
-    let output = "";
-
-
-    for(var e in input){
-        output = input[e] + output;
+        let output = "";
+    
+    
+        for(var e in input){
+            output = input[e] + output;
+        }
+    
+        console.log('"' + output + '"');
     }
+};
 
-    console.log('"' + output + '"');
-}
+func();

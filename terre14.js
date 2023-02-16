@@ -1,32 +1,39 @@
-let sorted = true;
-let error = false;
+const func = () => {
 
-for(let i = 2; i < process.argv.length; i++ )
-{
+    let sorted = true;
+    let error = false;
 
-    if(isNaN(process.argv[i]))
+    for(let i = 2; i < process.argv.length; i++ )
     {
-        error = true;
-        break;
+
+        if(isNaN(process.argv[i]))
+        {
+            error = true;
+            break;
+        }
+
+        if(parseInt(process.argv[i]) > parseInt(process.argv[i + 1]))
+        {
+            sorted = false;
+            break;
+        }
     }
 
-    if(parseInt(process.argv[i]) > parseInt(process.argv[i + 1]))
+    if(error)
     {
-        sorted = false;
-        break;
-    }
-}
-
-if(error)
-{
-    console.log("Erreur.");
-} else 
-{
-    if(sorted)
-    {
-        console.log("Triés.");
+        console.log("Erreur.");
     } else 
     {
-        console.log("Pas trié.");
-    } 
-}
+        if(sorted)
+        {
+            console.log("Triés.");
+        } else 
+        {
+            console.log("Pas trié.");
+        } 
+    }
+
+};
+
+func();
+

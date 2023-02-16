@@ -1,7 +1,5 @@
-const arg1 = process.argv[2];
-var premier = true;
-
-if(!arg1 || isNaN(arg1) 
+const prime = (arg1 = process.argv[2], premier = true) => {
+    if(!arg1 || isNaN(arg1) 
     || arg1 < 1 || process.argv.length > 3){
     console.log("erreur");
 } else {
@@ -17,3 +15,6 @@ if(!arg1 || isNaN(arg1)
         console.log(arg1 + " n'est pas premier.")
     }
 }
+};
+
+prime();
